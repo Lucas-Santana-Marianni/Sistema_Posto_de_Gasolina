@@ -1,0 +1,29 @@
+# Logs e arquivos temporários
+*.log
+*.tmp
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos do ambiente do editor/IDE
+*.vscode/
+.idea/
+
+# Backups de scripts SQL
+*.bak
+
+# Arquivos do MySQL temporários
+*.frm
+*.ibd
+*.MYD
+*.MYI
+*.err
+
+# Arquivos de cache
+.cache/
+node_modules/
+
+# Outras extensões desnecessárias
+*.swp
+*.lock
