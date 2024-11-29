@@ -1,0 +1,73 @@
+O Sistema de Gerenciamento de Posto de Gasolina é um banco de dados relacional projetado para gerenciar as operações e transações realizadas em um posto de combustíveis. O sistema permite o gerenciamento de combustíveis, bombas, funcionários, clientes, serviços oferecidos e transações realizadas. A estrutura do banco de dados foi desenvolvida utilizando comandos SQL para atender às necessidades de registro e análise de dados do estabelecimento.
+
+Principais funcionalidades:
+Gerenciar os tipos de combustíveis e seus preços por litro.
+Registrar informações das bombas de combustíveis.
+Manter os dados de funcionários e seus turnos de trabalho.
+Gerenciar os cadastros de clientes, incluindo contatos.
+Registrar abastecimentos realizados, incluindo volume, valor total e responsável pelo serviço.
+Oferecer e gerenciar serviços adicionais, como lavagem de veículos.
+Registrar transações financeiras, incluindo forma de pagamento e detalhes do cliente.
+
+
+Estrutura do Banco de Dados
+Tabelas e suas funcionalidades:
+Combustiveis
+
+Armazena informações sobre os tipos de combustíveis e seus preços.
+Campos:
+id_Combustivel: Identificador único do combustível.
+tipo: Nome ou tipo do combustível (ex.: Gasolina, Etanol).
+preco_por_litro: Preço por litro do combustível.
+Bombas
+
+Registra informações sobre as bombas de combustíveis.
+Campos:
+id_Combustivel: Relaciona a bomba a um tipo de combustível.
+descricao: Breve descrição da bomba.
+Funcionarios
+
+Armazena informações sobre os funcionários do posto.
+Campos:
+id_Funcionario: Identificador único do funcionário.
+nome: Nome completo do funcionário.
+cargo: Cargo ou função desempenhada.
+turno: Turno de trabalho (masculino ou feminino).
+telefone: Telefone para contato.
+Clientes
+
+Registra os dados de clientes cadastrados.
+Campos:
+id_Cliente: Identificador único do cliente.
+nome: Nome completo.
+telefone: Telefone para contato.
+email: Endereço de e-mail.
+Abastecimentos
+
+Armazena informações sobre os abastecimentos realizados.
+Campos:
+id_Abastecimento: Identificador único do abastecimento.
+id_Cliente: Cliente relacionado ao abastecimento.
+id_Bomba: Bomba utilizada no abastecimento.
+id_Funcionario: Funcionário responsável.
+volume: Volume abastecido (em litros).
+valor_total: Valor total do abastecimento.
+data_abastecimento: Data e hora do abastecimento.
+Servicos
+
+Registra os serviços adicionais oferecidos.
+Campos:
+id_Servico: Identificador único do serviço.
+descricao: Descrição do serviço.
+preco: Preço do serviço.
+Transacoes
+
+Armazena informações financeiras sobre as transações realizadas.
+Campos:
+id_Transacoes: Identificador único da transação.
+id_Cliente: Cliente relacionado à transação.
+id_Servico: Serviço contratado (se aplicável).
+id_Abastecimento: Abastecimento relacionado (se aplicável).
+forma_pagamento: Forma de pagamento utilizada (dinheiro, PIX, débito, crédito).
+total_pago: Valor total pago na transação.
+data_transicao: Data e hora da transação.
