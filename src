@@ -1,0 +1,54 @@
+create database PostoGasolina;
+use PostoGasolina;
+
+create table Combustiveis (
+id_Combustivel int auto_increment primary key,
+tipo varchar(50),
+preco_por_litro decimal(5, 2)
+);
+
+create table Bombas (
+id_Combustivel int,
+descricao varchar(100)
+);
+
+create table Funcionarios (
+id_Funcionario int auto_increment primary key,
+nome varchar(100),
+cargo varchar(50),
+turno enum ('feminino', 'masculino'),
+telefone varchar(15)
+);
+
+create table Clientes (
+id_Cliente int auto_increment primary key,
+nome varchar(100),
+telefone varchar(15),
+email varchar(100)
+);
+
+create table Abastecimentos (
+id_Abastecimento int auto_increment primary key,
+id_Cliente int,
+id_Bomba int,
+id_Funcionario int,
+volume decimal(6, 2),
+valor_total decimal(8, 2),
+data_abastecimento datetime
+);
+
+create table Servicos (
+id_Servico int auto_increment primary key,
+descricao varchar(255),
+preco decimal(8, 2)
+);
+
+create table Transacoes (
+id_Transacoes int auto_increment primary key,
+id_Cliente int,
+id_Servico int,
+id_Abastecimento int,
+forma_pagamento enum('dinheiro', 'pix', 'débito', 'crédito'),
+total_pago decimal(10, 2),
+data_transicao datetime
+);
